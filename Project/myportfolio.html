@@ -7,12 +7,13 @@
   <style>
     body {
       font-family: "Monaco";
+      background-color: #b3aeae;
     }
 
     .header {
       position: relative;
       height: 216px;
-      background-color: rgb(180, 180, 180);
+      background-color: rgb(217, 217, 217);
       display: grid;
       grid-template-columns: auto auto;
     }
@@ -28,35 +29,48 @@
     }
 
     .about-me {
-      height: 878px;
+      height: 378px;
       display: grid;
       grid-template-columns: 40% 60%;
-      background-color: #B3AEAE
     }
 
-    .about-me .container {
-      display: flex;
-    justify-content: center;
-    justify-items: center;
-    position: absolute;
-    width: 396px;
-    height: 366px;
-    align-items: center;
-    }
-    .about-me .container .image {
+    .avatar {
+      width: 325px;
+      height: 292px;
       background-image: url("aboutmeprofile.png");
+      background-position: center;
+    }
+
+    .circle {
+      margin: 48px 43px 25px 34px;
+      background-color: rgb(217, 217, 217);
+      border-radius: 200px;
+    }
+
+    .about-me .introduction .container {
       width: 595px;
       height: 51px;
-      border-top: -1044px;
-      border-left: -316px;
-      position: absolute;
+      color: rgb(217, 217, 217);
     }
-    .about-me .background {
-    padding: 53px 631px 1562px 11px;
-    background-color: #D9D9D9;
-    width:325px;
-    position:absolute;
-    height: 292px;
+
+    .about-me .introduction .title {
+      margin-top: 165px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 36;
+      line-height: 54px;
+      letter-spacing: 10;
+      color: white;
+    }
+
+    .about-me .description {
+      color: black;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 29px;
+      width: 596px;
+      height: 201px;
+      list-style-type:decimal;
     }
   </style>
 </head>
@@ -66,17 +80,19 @@
     <span class="greeting">Welcome!</span>
   </div>
   <div class="about-me">
-    <div>
-      <div class="container">
-        <div class="image"></div>
-      </div>
+    <div class="circle">
+      <div class="avatar"></div>
     </div>
-    <div>
-      <div class="title">INTRODUCTION</div>
-      <div class="description">
-        Name: Tram/Charlie
-        Age: 16
-        Pronouns: she/they
-        Mbti: istp-t
-        Language: Vietnamese & English
-      </div>
+    <div class="title">INTRODUCTION</div>
+    <div class="description">
+      Name: Tram/Charlie
+      Age: 16
+      Pronouns: she/they
+      Mbti: istp-t
+      Language: Vietnamese & English
+    </div>
+    <div class="introduction"></div>
+  </div>
+</body>
+
+</html>
