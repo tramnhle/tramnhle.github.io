@@ -13,7 +13,7 @@
     .header {
       position: relative;
       height: 216px;
-      background-color: rgb(217, 217, 217);
+      background-color: rgb(180, 180, 180);
       display: grid;
       grid-template-columns: auto auto;
     }
@@ -30,21 +30,23 @@
 
     .about-me {
       height: 378px;
-      display: grid;
-      grid-template-columns: 40% 60%;
+      display: flex;
     }
 
     .avatar {
-      width: 325px;
-      height: 292px;
-      background-image: url("aboutmeprofile.png");
-      background-position: center;
+      width: 100%;
     }
 
     .circle {
       margin: 48px 43px 25px 34px;
       background-color: rgb(217, 217, 217);
-      border-radius: 200px;
+      width: 35vw;
+      height: 35vw;
+      border-radius: 50%;
+    }
+
+    .about-me .introduction {
+      padding-left: 20px;
     }
 
     .about-me .introduction .container {
@@ -54,13 +56,12 @@
     }
 
     .about-me .introduction .title {
-      margin-top: 165px;
-      text-align: center;
+      margin-top: 37px;
       font-weight: 700;
       font-size: 36;
       line-height: 54px;
       letter-spacing: 10;
-      color: white;
+      background-color: D9D9D9;
     }
 
     .about-me .description {
@@ -68,9 +69,23 @@
       font-size: 26px;
       font-weight: 400;
       line-height: 29px;
-      width: 596px;
       height: 201px;
-      list-style-type:decimal;
+      margin-top: 10px;
+    }
+
+    .my-hobbies {
+    height: 328px;
+    display: flex;
+    }
+
+    .my-hobbies .title {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 25;
+    line-height: 33px;
+    background-color: #837E7E;
+    width: 181px;
+    height:52px;
     }
   </style>
 </head>
@@ -81,17 +96,24 @@
   </div>
   <div class="about-me">
     <div class="circle">
-      <div class="avatar"></div>
-    </div>
-    <div class="title">INTRODUCTION</div>
-    <div class="description">
-      Name: Tram/Charlie
-      Age: 16
-      Pronouns: she/they
-      Mbti: istp-t
-      Language: Vietnamese & English
+      <img class="avatar" src="aboutmeprofile.png"></img>
     </div>
     <div class="introduction"></div>
+    <div class="title">INTRODUCTION</div>
+    <div class="description">
+      <ul>
+        <li> Name: Tram/Charlie </li>
+        <li> Age: 16 </li>
+        <li> Pronouns: she/they </li>
+        <li> Mbti: istp-t </li>
+        <li>Language: Vietnamese & English </li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="my-hobbies">
+    <div class="title">My hobbies</div>
+  </div>
   </div>
 </body>
 
