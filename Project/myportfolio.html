@@ -3,6 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Monaco" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=JetBrains Mono" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/8298f109c6.js" crossorigin="anonymous"></script>
   <style>
     body {
@@ -29,7 +30,7 @@
     }
 
     .about-me {
-      height: 378px;
+      height: 40vw;
       display: flex;
     }
 
@@ -47,6 +48,7 @@
 
     .about-me .introduction {
       padding-left: 20px;
+      flex-grow: 2;
     }
 
     .about-me .introduction .container {
@@ -56,37 +58,131 @@
     }
 
     .about-me .introduction .title {
-      margin-top: 37px;
+      margin-top: 10vw;
       font-weight: 700;
-      font-size: 36;
+      font-size: 2vw;
       line-height: 54px;
       letter-spacing: 10;
       background-color: D9D9D9;
+      font-family: 'JetBrains Mono';
     }
 
     .about-me .description {
       color: black;
-      font-size: 26px;
+      font-size: 40px;
       font-weight: 400;
       line-height: 29px;
       height: 201px;
       margin-top: 10px;
+      line-height: 1.5;
     }
 
     .my-hobbies {
-    height: 328px;
-    display: flex;
+      height: 328px;
     }
 
     .my-hobbies .title {
-    margin-top: 32px;
-    font-weight: 700;
-    font-size: 25;
-    line-height: 33px;
-    background-color: #837E7E;
-    width: 181px;
-    height:52px;
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      height: 80px;
+      font-family: 'JetBrains Mono';
     }
+    .my-hobbies .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+      height: 235px;
+    }
+    .more-about-me .title {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      height: 80px;
+      font-family: 'JetBrains Mono';
+    }
+    .more-about-me .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+      height: 300px;
+    }
+    .school .title {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      height: 80px;
+      font-family: 'JetBrains Mono';
+    }
+    .school .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+      height:300px;
+    }
+    .goals .title {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      height: 80px;
+      font-family: 'JetBrains Mono';
+    }
+    .goals .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+    }
+    .happy-thing .title {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      font-family: 'JetBrains Mono';
+      height: 90px;
+    }
+    .happy-thing .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+    }
+    .social-media .title {
+      margin-top: 32px;
+      font-weight: 700;
+      font-size: 40px;
+      background-color: #837E7E;
+      font-family: 'JetBrains Mono';
+      height: 80px;
+    }
+    .social-media .description {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: rgb(217, 217, 217);
+    }
+    .main {
+      display:grid;
+      column-gap: 50px;
+      grid-template-columns: 60% 40%;
+    }
+    /* .main .left{
+    }
+    .main .right{
+    } */
   </style>
 </head>
 
@@ -98,22 +194,85 @@
     <div class="circle">
       <img class="avatar" src="aboutmeprofile.png"></img>
     </div>
-    <div class="introduction"></div>
-    <div class="title">INTRODUCTION</div>
-    <div class="description">
-      <ul>
-        <li> Name: Tram/Charlie </li>
-        <li> Age: 16 </li>
-        <li> Pronouns: she/they </li>
-        <li> Mbti: istp-t </li>
-        <li>Language: Vietnamese & English </li>
-      </ul>
+    <div class="introduction">
+      <div class="title">__Introduction</div>
+      <div class="description">
+        <ul>
+          <li> Name: Tram/Charlie </li>
+          <li> Age: 16 </li>
+          <li> Pronouns: she/they </li>
+          <li> Mbti: istp-t </li>
+          <li>Language: Vietnamese & English </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <hr>
-  <div class="my-hobbies">
-    <div class="title">My hobbies</div>
-  </div>
+  <div class="main">
+    <div class="left">
+      <div class="my-hobbies">
+        <div class="title">__My hobbies</div>
+        <div class="description">
+          I enjoy reading fictions stories, along with writing my own stories, I also like to play games, most of the
+          games I play are action role playing game. One game I still enjoy to play till now is Genshin Impact. I used
+          to
+          do arts too.
+        </div>
+      </div>
+      <div class="more-about-me">
+        <div class="title">__A little more about me</div>
+        <div class="description">
+          I was born in Vietnam, then moved to the US around five years ago. I can say that I’m pretty shy in general,
+          and I tend to be creative with my works. I like things that are organized (even though my desk probably
+          isn’t), I used to do journaling but ever since I found Notion - a website for all ages to organized our
+          information and such for works, schools, so I quit journaling for a while now.
+        </div>
+      </div>
+      <div class="school">
+        <div class="title">__School</div>
+        <div class="description">
+          I probably do fine in school, though I do try to aim for the best grade and set it as my goal to get. My
+          favorite subjects are Geometry and English, I also enjoy Creative Writing. Through the experiences I have at
+          school, I would say to do good in a class also include how your teacher is. Their explanations and lectures
+          have to be understandable and easy to follow, or else you might as well just study at home and hope you won’t
+          fail!
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="goals">
+        <div class="title">Goals</div>
+        <div class="description">
+          <ul>
+            <li>- I become a person that I always dream of and wish to be </li>
+            <li>- I make a positive impact on those around me </li>
+            <li>- I make my parents/family proud of me </li>
+          </ul>
+        </div>
+      </div>
+      <div class="happy-thing">
+        <div class="title">Things that make me happy</div>
+        <div class="description">
+          <ul>
+            <li>watching comfort shows or movies</li>
+            <li>reading books or fanfiction</li>
+            <li>listening to hype, comfort, relax, happy music</li>
+            <li>drawing something cute or random</li>
+            <li>writing down my goals</li>
+            <li>find something inspirational</li>
+            <li>creating moodboard/motivation for myself</li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="title">Social media</div>
+        <div class="description">
+          <ul>
+            <li>Follow me! My IG is @trammnhhhh</li>
+            <li>Thanks for reading!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
