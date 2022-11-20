@@ -32,7 +32,7 @@
     </style>
     <script>
         function deleteNote(number){
-        
+        console.log(number);
         }
         function addNote() {
         let note = document.getElementById('addingnotes').value;
@@ -43,6 +43,9 @@
         const node3 = document.createElement("p");
         node3.innerText = note;
         const node4 = document.createElement("button");
+        node4.onclick = function() {
+            this.parentElemenet.remove();
+        };
         node4.innerText = 'Delete Note';
         node1.appendChild(node2);
         node1.appendChild(node3);
