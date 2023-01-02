@@ -1,0 +1,473 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/8298f109c6.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: "Poppins";
+    }
+
+    .header {
+      position: relative;
+      height: 216px;
+      background-color: rgba(217, 93, 84);
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .header .name {
+      font-family: "Pattaya";
+      font-size: 48px;
+      line-height: 216px;
+      text-align: center;
+    }
+
+    .top-menu {
+      margin: 0px;
+      display: flex;
+      font-weight: bold;
+      font-size: 24px;
+      color: white;
+      justify-items: flex-end;
+    }
+
+    .top-menu li,
+    .top-menu i {
+      display: inline-block;
+      padding-left: 97px;
+      line-height: 216px;
+    }
+
+    .about-vietnam {
+      height: 878px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      background-color: rgb(164, 23, 38);
+    }
+
+    .about-vietnam .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      height: 878px;
+    }
+
+    .about-vietnam .container .image {
+      background-image: url("about-vietnam.jpg");
+      background-position: center;
+      background-size: 680px;
+      width: 672px;
+      height: 644px;
+      border-radius: 322px;
+      margin-top: 103px;
+    }
+
+    .about-vietnam .title {
+      margin-top: 165px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 36;
+      line-height: 54px;
+      letter-spacing: 10;
+      color: white;
+    }
+
+    .about-vietnam .description {
+      color: white;
+      margin-top: 56px;
+      margin-bottom: 59px;
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    .about-vietnam .links {
+      margin-top: 34px;
+      text-align: center;
+      letter-spacing: 24px;
+      line-height: 24px;
+      font-size: 24px;
+    }
+
+    .follow-me {
+      height: 621px;
+    }
+
+    .footer {
+      height: 174px;
+    }
+
+    .folklores {
+      margin-top: 89px;
+      margin-left: 100px;
+      height: 609px;
+      display: flex;
+      min-width: 1520px;
+    }
+
+    .folklores .background {
+      padding: 59px 380px 88px 21px;
+      width: 551px;
+      height: 505px;
+      background-color: rgba(217, 93, 84);
+    }
+
+    .folklores .image {
+      width: 900px;
+      height: 553px;
+      background-image: url('environmental.jpg');
+      background-position: center;
+    }
+
+    .folklores .text {
+      padding-top: 165px;
+      padding-left: 83px;
+
+    }
+
+    .folklores .text .description {
+      margin-top: 46px;
+    }
+
+    .folklores .text .title {
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    .folklores .text .title .heading {
+      line-height: 74px;
+      letter-spacing: 10px;
+    }
+
+    .folklores .text .description {
+      font-weight: 400;
+      font-size: 30px;
+    }
+
+
+    .tradition {
+      margin-top: 48px;
+      margin-left: 100px;
+      height: 609px;
+      display: flex;
+      min-width: 1520px;
+    }
+
+    .tradition .background {
+      padding: 59px 380px 88px 21px;
+      width: 551px;
+      height: 505px;
+      background-color: rgba(217, 93, 84);
+      margin-left: 66px;
+    }
+
+    .tradition .image {
+      width: 900px;
+      height: 553px;
+      background-image: url('tet-tai-nha.jpg');
+      background-position: center;
+    }
+
+    .tradition .text {
+      padding-top: 165px;
+      padding-left: 83px;
+
+    }
+
+    .tradition .text .description {
+      margin-top: 46px;
+    }
+
+    .tradition .text .title {
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    .tradition .text .title .heading {
+      line-height: 30px;
+      letter-spacing: 10px;
+    }
+
+    .tradition .text .description {
+      font-weight: 400;
+      font-size: 27px;
+    }
+
+    .cuisines {
+      margin-top: 85px;
+      margin-left: 100px;
+      height: 609px;
+      display: flex;
+      min-width: 1520px;
+    }
+
+    .cuisines .background {
+      padding: 59px 380px 88px 21px;
+      width: 551px;
+      height: 505px;
+      background-color: rgba(217, 93, 84);
+    }
+
+    .cuisines .image {
+      width: 910px;
+      height: 550px;
+      background-image: url('bun-thang.jpg');
+      background-position: center;
+    }
+
+    .cuisines .text {
+      padding-top: 165px;
+      padding-left: 83px;
+      margin-bottom: 157px;
+    }
+
+    .cuisines .text .description {
+      margin-top: 46px;
+    }
+
+    .cuisines .text .title {
+      font-weight: 700;
+      font-size: 33px;
+    }
+
+    .cuisines .text .title .heading {
+      line-height: 1px;
+      letter-spacing: 10px;
+    }
+
+    .cuisines .text .description {
+      font-weight: 400;
+      font-size: 28px;
+    }
+
+    .language-education {
+      margin-top: 175px;
+      display: grid;
+      grid-template-columns: auto auto;
+      height: 775px;
+      background-color: rgba(217, 93, 84);
+      padding-top: 83px;
+      padding-bottom: 95px;
+      padding-left: 100px;
+      box-sizing: border-box;
+    }
+
+    .language-education .service {
+      height: 597px;
+      background-color: white;
+      padding-left: 152px;
+      padding-top: 97px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .language-education .heading {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 50px;
+      letter-spacing: 3px;
+    }
+
+    .language-education .text {
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 36px;
+      letter-spacing: 2px;
+      padding-right: 74px;
+      padding-left: 1px;
+    }
+
+    .language-education .left {
+      margin-right: 51px;
+    }
+
+    .language-education .right {
+      margin-right: 118px;
+    }
+
+    .testimonials {
+      height: 685px;
+      position: relative;
+    }
+
+    .testimonials .background {
+      background-image: url('testimonials.jpg');
+      background-position: center;
+      opacity: 0.25;
+      height: 685px;
+      position: absolute;
+      width: 100%;
+    }
+
+    .testimonials .heading {
+      padding-top: 214px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 54px;
+      text-align: center;
+    }
+
+    .testimonials .description {
+      padding-left: 191px;
+      padding-right: 208px;
+      padding-top: 80px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 4px;
+      text-align: center;
+    }
+
+    .testimonials .top {
+      top: 85px;
+      right: 90px;
+    }
+
+    .testimonials .bottom {
+      bottom: 25px;
+      left: 59px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <span class="name">Vietnam</span>
+    <ul class="top-menu">
+      <li>Folklores</li>
+      <li>Tradition</li>
+      <li>Cuisines</li>
+      <li>Language</li>
+      <li>Education</li>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </ul>
+  </div>
+  <div class="about-vietnam">
+    <div>
+      <div class="container">
+        <div class="image"></div>
+      </div>
+    </div>
+    <div>
+      <div class="title">ABOUT VIETNAM</div>
+      <div class="description">
+        <p> Vietnam is a country in Southeast Asia, lie in the Eastern edge of mainland in Southeast Asia. Vietnam is
+          known
+          for its beautiful tourist areas, delicious food, history especially Vietnam war and an overall affordable
+          prices
+          for all of your needs!</p>
+
+        <p> The most dazzling location on the left is called Golden Bridge, a place in Da Nang, Vietnam. It has a unique
+          design with two large hands spreading wide facing up, as if the hands are lifting up the bridge. Resemble
+          nature
+          hands giving human supports from the ground. </p>
+      </div>
+      <div class="links">
+      </div>
+    </div>
+  </div>
+  <div class="folklores">
+    <div class="background">
+      <div class="image"></div>
+    </div>
+    <div class="text">
+      <div class="title">
+        <span class="heading">Folklores</span>
+      </div>
+      <div class="description">
+        <p>
+          Vietnam's history revolves around a lot of myths and folklore. They are often used to teach young children
+          about their origins and ancestors. Most of the famous myths and folklore are “The Fight between Mountain God
+          and Water God” (Sơn Tinh – Thủy Tinh
+          ), “The Vietnamese creation origin” (Lạc Long Quân and Âu Cơ), “The Legend of Lang Lieu” (Sự tích bánh chưng
+          bánh dày), and so much more.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="tradition">
+    <div class="text">
+      <div class="title">
+        <span class="heading">Tradition</span>
+      </div>
+      <div class="description">
+        <p>Vietnam’s culture has many unique traditions, the most important tradition would be Tet Nguyen Dan - meaning
+          "Festival of the First Day of the Year". The celebrations start to celebrate the arrival of Spring, based on
+          the Vietnamese calendar.</p>
+        <p>This is an image of a small celebration herein America during Tet in my house. Though the process of making
+          Banh Chung (a type of rice cake we usually eat during the celebration) and other food is long and tiring as I
+          only have me and my mother as the cooker now, the feeling of excitement for Tet is still here in my heart. It
+          feels less exciting than the times I celebrate Tet with my family back in Vietnam, but at least, I still get
+          to celebrate it even when I live all the way here in America.
+        </p>
+      </div>
+    </div>
+    <div class="background">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="cuisines">
+    <div class="background">
+      <div class="image"></div>
+    </div>
+    <div class="text">
+      <div class="title">
+        <span class="heading">Cuisines</span>
+      </div>
+      <div class="description">
+        <p>Every country has its own signature dishes, and Vietnam does too. You may know about famous dishes from
+          Vietnam such as Phở, Bánh Mì, Bánh Chưng, Bánh Dày, Bánh Xèo, and so on. But there are many more dishes that
+          are also very popular in the community.
+        </p>
+        <p>The left image showed a dish in Ha Noi that I cook with my mother last year, which is also called a Northern
+          Vietnam. This dish is called Bun Thang, a variety
+          of noodle dishes that people eat after Lunar New Year’s parties or people can just go into any restaurant
+          whenever they are craving a hot traditional bowl of noodles soup. Bun Thang consists of chicken broth,
+          thin-cut pork sausage (chả lụa), thin-cut egg, shredded chicken, dried shrimp paste, and chopped vermicelli
+          onion.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="language-education">
+    <div class="service left">
+      <div class="heading">Language</div>
+      <div class="text">
+        <p>Vietnamese maybe not be the hardest or most challenging language to learn, but the way people from different
+          areas say it can confuse a lot of people even the locals.
+        </p>
+        <p>One easy example I know is the way they pronounce [i] is like [e] in English, or the way many Vietnamese
+          first names that are hard to say for new beginners, such as [Nguyễn], [Hữu], [Đỗ], and so on. Luckily my first
+          name is on the easier part, which consists of only two letters, [Lê], it actually pronounces like LEH but
+          lowers your voice a bit and not LEE like how others usually say it. But since it is easier for them to
+          pronounce so I really don’t have many opinions over that. </p>
+      </div>
+    </div>
+    <div class="service right">
+      <div class="heading">Education</div>
+      <div class="text">Like most countries, Vietnam values a lot in education and becoming successful in life. There
+        are after school tutoring classes that can be taught right by your homeroom teacher, whether it is right at
+        school or in specific locations. There are even designated schools for gifted, especially high schools where
+        everything become very competitive. Different languages are indeed being taught in Vietnam, but the most
+        important and usually only available in school is English. Other languages can be learned through after-school
+        centers, these centers not only teach languages but also math and many more subjects. </div>
+    </div>
+  </div>
+  </div>
+  <div class="testimonials">
+    <div class="background"></div>
+    <div class="text">
+      <div class="heading">About me</div>
+      <div class="description">Hi! Thank you for reading, you have reached the end of my presentation on Vietnam. I have
+        been wanting to express my culture and origin and Personal Project gave me that chance to be able to try to
+        combine what I learn in Computer Science and what I am passionate about. In the future, I will try to make more
+        unique and flexible websites, please do look forward to it! Thank you again! :)</div>
+    </div>
+  </div>
+</body>
+
+</html>
