@@ -1,0 +1,960 @@
+{
+	"info": {
+		"_postman_id": "fec6adeb-1e1b-4429-a34c-dfe3625a1145",
+		"name": "TaskList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24528040"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\n\t\"email\": \"thanqminh+3@gmail.com\",\n\t\"password\": \"12345678\" \n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/auth",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"tramnhle3@gmail.com\",\n\t\"password\": \"20061219\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/auth/sign_in",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth",
+						"sign_in"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "thanqminh@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/users",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get TaskList Share",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "jELxdfWdnD8w0v5_8HCpkg",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "thanqminh@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "ryHRu4vIzJCXRbFTD12uwQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{server}}/shared",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"shared"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Create TaskList Share",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 28,\n    \"task_list_id\": 65,\n    \"is_write\": true\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists/{{listId}}/share",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"{{listId}}",
+						"share"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shared Tasklist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/shared",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"shared"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{server}}/profile",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"profile"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get TaskList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/task_lists",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"password\": \"12345679\",\n        \"password_confirmation\": \"12345679\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/auth",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Users",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"12345679\",\n    \"password_confirmation\": \"12345679\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/auth",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo Local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "VDFl7eF_JX1sHbHzhM1kGw",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "thanqminh@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "yvQSClWfOTZI8Trw3daLvQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/task_lists/{{listId}}/todos",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"{{listId}}",
+						"todos"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo Local",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"todo2\",\n    \"description\": \"minh1 created this\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists/2/todos",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"2",
+						"todos"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete TaskList",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "FmfTR6acAtfzehRB3lYXGg",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "thanqminh+2@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "O_y3gNNyj2r9FZdSR4-0jg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://herokutuan.herokuapp.com/task_lists/667",
+					"protocol": "http",
+					"host": [
+						"herokutuan",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task_lists",
+						"667"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update TaskList",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "FmfTR6acAtfzehRB3lYXGg",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "thanqminh+2@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "O_y3gNNyj2r9FZdSR4-0jg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://herokutuan.herokuapp.com/task_lists/667",
+					"protocol": "http",
+					"host": [
+						"herokutuan",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"task_lists",
+						"667"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/task_lists/13/todos",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"13",
+						"todos"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Start personal project\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists/26/todos",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"26",
+						"todos"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Segments in Quadrilaterals Practice\",\n    \"description\": \"It's due on Monday btw\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists/18/todos/15",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"18",
+						"todos",
+						"15"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{HOST}}/task_lists/26/todos/22",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"26",
+						"todos",
+						"22"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Plane\",\r\n   \"description\": \"In the bag\",\r\n   \"done\": false\r\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists/26/todos/23",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists",
+						"26",
+						"todos",
+						"23"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Create TaskList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "thanqminh+2@gmail.com"
+					},
+					{
+						"key": "password",
+						"value": "12345678"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					},
+					{
+						"key": "uid",
+						"value": "{{UID}}",
+						"type": "text"
+					},
+					{
+						"key": "client",
+						"value": "{{CLIENT}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Code a website for personal project\"\n}"
+				},
+				"url": {
+					"raw": "{{HOST}}/task_lists",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"task_lists"
+					]
+				},
+				"description": "http://herokutuan.herokuapp.com/auth/sign_in"
+			},
+			"response": []
+		},
+		{
+			"name": "Create TodoList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Client",
+						"value": "oLixP8wGX1meolgY0IouYQ"
+					},
+					{
+						"key": "Access-Token",
+						"value": "PyGudZox1IXPQ-N2vVSFMg"
+					},
+					{
+						"key": "Uid",
+						"value": "thanqminh@gmail.com"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"abc\"\n}"
+				},
+				"url": {
+					"raw": "https://todo-js-be.herokuapp.com/todo_lists",
+					"protocol": "https",
+					"host": [
+						"todo-js-be",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todo_lists"
+					]
+				},
+				"description": "localhost:3000/todo_lists"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "listid",
+			"value": "26"
+		}
+	]
+}
